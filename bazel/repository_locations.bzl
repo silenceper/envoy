@@ -1304,6 +1304,7 @@ REPOSITORY_LOCATIONS_SPEC = dict(
         project_desc = "WebAssembly for Proxies (C++ host implementation)",
         project_url = "https://github.com/proxy-wasm/proxy-wasm-cpp-host",
         version = "c837fa8a7e50b1d4c2ee98ce5064af901219bdff",
+        sha256 = "f6343fd0edbe61eb6719703b8c146d032b5ec182dbadea9ff4904903e2567922",
         strip_prefix = "proxy-wasm-cpp-host-{version}",
         urls = ["https://github.com/silenceper/proxy-wasm-cpp-host/archive/{version}.tar.gz"],
         use_category = ["dataplane_ext"],
