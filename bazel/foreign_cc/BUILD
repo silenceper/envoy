@@ -491,10 +491,10 @@ envoy_cmake(
         "WAMR_BUILD_MULTI_MODULE": "0",
         # enable below to enhance development experience
         # name section
-        "WAMR_BUILD_CUSTOM_NAME_SECTION": "0",
-        "WAMR_BUILD_LOAD_CUSTOM_SECTION": "0",
+        "WAMR_BUILD_CUSTOM_NAME_SECTION": "1",
+        "WAMR_BUILD_LOAD_CUSTOM_SECTION": "1",
         # output call stack if meet a trap
-        "WAMR_BUILD_DUMP_CALL_STACK": "0",
+        "WAMR_BUILD_DUMP_CALL_STACK": "1",
         # linux perf. only for jit and aot
         "WAMR_BUILD_LINUX_PERF": "0",
     },
