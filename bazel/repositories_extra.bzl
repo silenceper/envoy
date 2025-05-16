@@ -1,6 +1,6 @@
 load("@emsdk//:deps.bzl", emsdk_deps = "deps")
 load("@rules_python//python:repositories.bzl", "python_register_toolchains")
-load("@proxy_wasm_cpp_host//bazel/cargo/wasmtime:crates.bzl", "wasmtime_fetch_remote_crates")
+load("@proxy_wasm_cpp_host//bazel/cargo/wasmtime/remote:crates.bzl", "crate_repositories")
 load("//bazel/external/cargo:crates.bzl", "raze_fetch_remote_crates")
 load("@aspect_bazel_lib//lib:repositories.bzl", "aspect_bazel_lib_dependencies")
 
@@ -15,7 +15,7 @@ PYTHON_MINOR_VERSION = _python_minor_version(PYTHON_VERSION)
 def envoy_dependencies_extra(python_version = PYTHON_VERSION):
     emsdk_deps()
     raze_fetch_remote_crates()
-    wasmtime_fetch_remote_crates()
+    crate_repositories()
 
     # Registers underscored Python minor version - eg `python3_10`
     python_register_toolchains(
