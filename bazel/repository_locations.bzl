@@ -965,6 +965,23 @@ REPOSITORY_LOCATIONS_SPEC = dict(
         license = "Apache-2.0",
         license_url = "https://github.com/llvm/llvm-project/blob/llvmorg-{version}/llvm/LICENSE.TXT",
     ),
+    org_llvm_llvm_15_0_7 = dict(
+        project_name = "LLVM_15_0_7",
+        project_desc = "LLVM Compiler Infrastructure",
+        project_url = "https://llvm.org",
+        version = "15.0.7",
+        sha256 = "8b5fcb24b4128cf04df1b0b9410ce8b1a729cb3c544e6da885d234280dedeac6",
+        strip_prefix = "llvm-project-{version}.src",
+        urls = ["https://github.com/llvm/llvm-project/releases/download/llvmorg-{version}/llvm-project-{version}.src.tar.xz"],
+        release_date = "2023-01-12",
+        use_category = ["dataplane_ext"],
+        extensions = [
+            "envoy.wasm.runtime.wamr",
+        ],
+        cpe = "cpe:2.3:a:llvm:*:*",
+        license = "Apache-2.0",
+        license_url = "https://github.com/llvm/llvm-project/blob/llvmorg-{version}/llvm/LICENSE.TXT",
+    ),
     com_github_wamr = dict(
         project_name = "Webassembly Micro Runtime",
         project_desc = "A standalone runtime with a small footprint for WebAssembly",
