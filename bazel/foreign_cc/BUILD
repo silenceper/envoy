@@ -473,10 +473,10 @@ envoy_cmake(
         # please refer to
         # - enable jit and aot. https://github.com/proxy-wasm/proxy-wasm-cpp-host/pull/378
         # - support precompiled wasm. https://github.com/proxy-wasm/proxy-wasm-cpp-host/pull/380
-        "WAMR_BUILD_AOT": "0",
-        "WAMR_BUILD_FAST_INTERP": "1",
+        "WAMR_BUILD_AOT": "1",
+        "WAMR_BUILD_FAST_INTERP": "0",
         "WAMR_BUILD_INTERP": "1",
-        "WAMR_BUILD_JIT": "0",
+        "WAMR_BUILD_JIT": "1",
         # disable WASI
         "WAMR_BUILD_LIBC_WASI": "0",
         "WAMR_BUILD_LIBC_BUILTIN": "0",
@@ -491,12 +491,12 @@ envoy_cmake(
         "WAMR_BUILD_MULTI_MODULE": "0",
         # enable below to enhance development experience
         # name section
-        "WAMR_BUILD_CUSTOM_NAME_SECTION": "0",
-        "WAMR_BUILD_LOAD_CUSTOM_SECTION": "0",
+        "WAMR_BUILD_CUSTOM_NAME_SECTION": "1",
+        "WAMR_BUILD_LOAD_CUSTOM_SECTION": "1",
         # output call stack if meet a trap
-        "WAMR_BUILD_DUMP_CALL_STACK": "0",
+        "WAMR_BUILD_DUMP_CALL_STACK": "1",
         # linux perf. only for jit and aot
-        "WAMR_BUILD_LINUX_PERF": "0",
+        "WAMR_BUILD_LINUX_PERF": "1",
     },
     lib_source = "@com_github_wamr//:all",
     out_static_libs = ["libvmlib.a"],
