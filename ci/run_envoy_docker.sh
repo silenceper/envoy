@@ -56,12 +56,7 @@ else
   START_COMMAND=(
       "/bin/bash"
       "-lc"
-      "groupadd ${DOCKER_GROUP_ARGS[*]} -f envoygroup \
-          && useradd -o --uid ${USER_UID} ${DOCKER_USER_ARGS[*]} --no-create-home --home-dir /build envoybuild \
-          && usermod -a -G pcap envoybuild \
-          && chown envoybuild:envoygroup /build \
-          && chown envoybuild /proc/self/fd/2 \
-          && sudo -EHs -u envoybuild bash -c 'cd /source && $*'")
+      "bash -c 'cd /source && $*'")
 fi
 
 if is_windows; then
