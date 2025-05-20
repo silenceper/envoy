@@ -23,3 +23,13 @@ envoy_python_dependencies()
 load("//bazel:dependency_imports.bzl", "envoy_dependency_imports")
 
 envoy_dependency_imports()
+
+load("@bazel_gazelle//:deps.bzl", "go_repository")
+
+go_repository(
+    name = "org_golang_x_tools",
+    importpath = "golang.org/x/tools",
+    sum = "h1:po9/4sTYwOU9QPo1XTU8+YLNBPyXgS4nSdIjxNBXtxg=",
+    version = "v0.1.12",
+    build_external = "external",
+)
